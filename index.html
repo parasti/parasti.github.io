@@ -23,12 +23,12 @@
       }
 
       h1 {
-        font-size: 4rem;
-        animation-name: spin, bounce;
-        animation-duration: 3s, 0.5s;
+        font-size: 8rem;
+        animation-name: spin, bounce, colorize;
+        animation-duration: 3s, 0.5s, 3s;
         animation-iteration-count: infinite;
-        animation-direction: alternate-reverse;
-        animation-timing-function: ease-in, ease-in-out;
+        animation-direction: alternate-reverse, alternate-reverse, alternate;
+        animation-timing-function: ease-in, ease-in-out, steps(1);
         position: relative;
       }
 
@@ -47,6 +47,20 @@
         }
         to {
           top: -0.5rem;
+        }
+      }
+
+      @keyframes colorize {
+        0% {
+          color: #ffd700;
+        }
+
+        16% {
+          color: #0057b7;
+        }
+
+        56% {
+          color: #ffd700;
         }
       }
     </style>
